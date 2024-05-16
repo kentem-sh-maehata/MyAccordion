@@ -1,0 +1,37 @@
+h1 {
+  font-size: 18px;
+  border-bottom: 1px solid;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+dl {
+  margin: 0;
+}
+dl div {
+  margin-bottom: 8px;
+}
+
+dt {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+}
+dt::before {
+  content: "Q. ";
+}
+dt::after {
+  content: "+";
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+dd {
+  margin: 0;
+  display: none;
+}
+dd::before {
+  content: "A. ";
+}/*# sourceMappingURL=style.css.map */
