@@ -11,21 +11,29 @@ dl {
 dl div {
   margin-bottom: 8px;
 }
-
-dt {
+dl div dt {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   position: relative;
 }
-dt::before {
+dl div dt::before {
   content: "Q. ";
 }
-dt::after {
+dl div dt::after {
   content: "+";
   position: absolute;
   top: 8px;
   right: 16px;
+  transition: transform 0.3s;
+}
+dl div.appear dd {
+  display: block;
+  margin: 10px;
+  animation: 0.3s fadeIn;
+}
+dl div.appear dt::after {
+  transform: rotate(45deg);
 }
 
 dd {
@@ -34,4 +42,15 @@ dd {
 }
 dd::before {
   content: "A. ";
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }/*# sourceMappingURL=style.css.map */
